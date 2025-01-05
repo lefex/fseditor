@@ -1,0 +1,28 @@
+.pm-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pm-image-alt {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 0.2em;
+  text-align: center;
+}
+
+.pm-align-left {
+  align-items: flex-start;
+}
+
+.pm-align-right {
+  align-items: flex-end;
+}
+
+.pm-align-center {
+  align-items: center;
+}
+
+.pm-image-resizable {
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#editor {
+  font-size: 16px;
+}
+
+.ProseMirror {
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 400px;
+  width: 90vw;
+  padding: 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  p {
+    margin: 8px 0;
+    &::before {
+      content: attr(data-placeholder);
+      color: #bbbfc4;
+      cursor: text;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: absolute;
+      top: auto;
+    }
+  }
+}
+.ProseMirror:focus {
+  outline: none;
+}
+
+.pm-title-wrapper {
+  position: relative;
+  &::before {
+    content: attr(data-placeholder);
+    color: #bbbfc4;
+    cursor: text;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    left: 32px;
+    font-size: 32px;
+    top: auto;
+  }
+  .pm-title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    .pm-emoji {
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+    .pm-title {
+      flex: 1;
+    }
+  }
+  .pm-status-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .pm-status-item:first-child {
+      padding-left: 0;
+    }
+    .pm-status-item {
+      font-size: 15px;
+      color: #999;
+      padding: 0 20px;
+    }
+  }
+}

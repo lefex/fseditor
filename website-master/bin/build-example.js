@@ -1,0 +1,28 @@
+const {rollup} = require("rollup")
+
+let globals = {}, external = []
+;("model transform state view keymap inputrules history commands schema-basic " +
+  "schema-list dropcursor menu example-setup gapcursor").split(" ").forEach(name => {
+  globals["prosemirror-" + name] = "PM." + name.replace(/-/g, "_")
+  external.push("prosemirror-" + name)
+})
+
+let input = process.argv[2]
+
+let options = {
+  input,
+  plugins: [
+    require("@rollup/plugin-node-resolve").nodeResolve({main: true, preferBuiltins: false}),
+    require("@rollup/plugin-json")(),
+    require("@rollup/plugin-commonjs")()
+  ],
+  external,
+  output: {format: "iife", globals}
+}
+
+rollup(options).then(bundle => bundle.generate(options.output)).then(
+  bundle => {
+    for (let file of bundle.output) if (file.fileName == "index.js") console.log(file.code)
+  },
+  error => { console.error(error.stack || error.message); process.exit(1) }
+)

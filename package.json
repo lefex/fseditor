@@ -1,0 +1,34 @@
+{
+  "name": "pmeditor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.9",
+    "codemirror": "^6.0.1",
+    "prosemirror-commands": "^1.5.2",
+    "prosemirror-example-setup": "^1.2.2",
+    "prosemirror-inputrules": "^1.4.0",
+    "prosemirror-keymap": "^1.2.2",
+    "prosemirror-markdown": "^1.11.1",
+    "prosemirror-model": "^1.19.3",
+    "prosemirror-schema-basic": "^1.2.2",
+    "prosemirror-schema-list": "^1.3.0",
+    "prosemirror-state": "^1.4.3",
+    "prosemirror-tables": "^1.3.7",
+    "prosemirror-view": "^1.31.6",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "less": "^4.2.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0",
+    "vue-tsc": "^1.8.3"
+  }
+}

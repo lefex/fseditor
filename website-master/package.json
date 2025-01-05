@@ -1,0 +1,62 @@
+{
+  "name": "prosemirror-website",
+  "version": "0.0.1",
+  "description": "ProseMirror's website, documentation system, and demos",
+  "maintainers": [
+    {
+      "name": "Marijn Haverbeke",
+      "email": "marijn@haverbeke.berlin",
+      "web": "http://marijnhaverbeke.nl"
+    }
+  ],
+  "dependencies": {
+    "@codemirror/commands": "^6.0.0",
+    "@codemirror/lang-javascript": "^6.0.0",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/view": "^6.0.0",
+    "@lezer/highlight": "^1.0.0",
+    "@lezer/html": "^1.0.0",
+    "@lezer/javascript": "^1.0.0",
+    "crelt": "^1.0.0",
+    "prosemirror-collab": "^1.0.0",
+    "prosemirror-commands": "^1.0.0",
+    "prosemirror-example-setup": "^1.0.0",
+    "prosemirror-gapcursor": "^1.0.0",
+    "prosemirror-history": "^1.0.0",
+    "prosemirror-inputrules": "^1.0.0",
+    "prosemirror-keymap": "^1.0.0",
+    "prosemirror-markdown": "^1.0.0",
+    "prosemirror-menu": "^1.0.0",
+    "prosemirror-model": "^1.0.0",
+    "prosemirror-schema-basic": "^1.0.0",
+    "prosemirror-schema-list": "^1.0.0",
+    "prosemirror-state": "^1.0.0",
+    "prosemirror-transform": "^1.0.0",
+    "prosemirror-view": "^1.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "builddocs": "^1.0.6",
+    "getdocs-ts": "^0.1.2",
+    "markdown-it": "^12.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "moduleserve": "^0.8.0",
+    "mold-template": "^2.0.0",
+    "punycode": "^1.4.0",
+    "rollup": "^2.26.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "serve-static": "^1.14.1",
+    "tariff": "0.1.0"
+  },
+  "scripts": {
+    "start": "node src/collab/server/start.js",
+    "devserver": "node src/devserver.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prosemirror/website.git"
+  }
+}
