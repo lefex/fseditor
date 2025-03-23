@@ -17,7 +17,6 @@ export function createPlaceholderPlugin() {
     key: new PluginKey("pmplaceholder"),
     props: {
       decorations(state) {
-        console.log('decorations >>>>>>>', state);
         const { doc, selection } = state;
         // 创建一个空的DecorationSet
         const decorations: Decoration[] = []
@@ -39,9 +38,7 @@ export function createPlaceholderPlugin() {
           if (selection instanceof TextSelection) {
             // 当前是文本选区（光标）
             if (selection.empty) {
-              console.log('selection >>>>>>>', doc);
               const selectionNode = selection.$from.parent;
-              console.log('selection >>>>>>>', selection, selectionNode);
               if (selectionNode === node) {
                 selectionInNode = true;
               }
